@@ -161,7 +161,7 @@ La désinstallation entraîne généralement la suppression des données privée
 
 Sur iOS, la base de données locale de l’Application peut être incluse dans la sauvegarde iCloud ou ordinateur de l’appareil, selon les réglages de l’utilisateur ; les identifiants enregistrés dans le Keychain ne sont pas transférés vers un autre appareil. Sur Android, la sauvegarde automatique des données de l’Application est désactivée.
 
-Les fichiers de sauvegarde exportés volontairement par l’utilisateur depuis l’Application ne contiennent aucun mot de passe, sauf si l’utilisateur choisit de les y inclure ; ils sont alors chiffrés à l’aide d’une phrase de passe qu’il définit.
+Les fichiers de sauvegarde exportés volontairement par l’utilisateur depuis l’Application ne contiennent jamais de mot de passe ni d’adresse de playlist : après restauration, l’utilisateur ressaisit ses identifiants.
 
 Les données éventuellement conservées par un fournisseur IPTV ou un autre service tiers doivent être supprimées selon les règles et procédures de ce fournisseur.
 
