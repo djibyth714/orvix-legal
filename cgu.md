@@ -4,9 +4,9 @@ title: Conditions générales d’utilisation — Orvix IPTV
 
 # CONDITIONS GÉNÉRALES D’UTILISATION (CGU)
 
-**Application : Orvix IPTV**
-**Version : 1.0**
-**Date d’entrée en vigueur : 9 octobre 2026**
+**Application : Orvix IPTV**  
+**Version : 1.0**  
+**Date d’entrée en vigueur : 9 octobre 2026**  
 **Éditeur : DF Prod Lab**
 
 ## 1. Objet
@@ -172,8 +172,8 @@ Lorsque la réglementation l’exige, les utilisateurs consommateurs disposent d
 
 Pour toute question relative aux présentes CGU :
 
-**DF Prod Lab**
-Contact par e-mail uniquement.
+**DF Prod Lab**  
+Contact par e-mail uniquement.  
 E-mail : dfprodlab@gmail.com
 
 ---

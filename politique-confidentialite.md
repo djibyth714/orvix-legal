@@ -4,9 +4,9 @@ title: Politique de confidentialité — Orvix IPTV
 
 # POLITIQUE DE CONFIDENTIALITÉ
 
-**Application : Orvix IPTV**
-**Version : 1.0**
-**Dernière mise à jour : 9 octobre 2026**
+**Application : Orvix IPTV**  
+**Version : 1.0**  
+**Dernière mise à jour : 9 octobre 2026**  
 **Responsable du traitement : DF Prod Lab**
 
 ## 1. Introduction
@@ -233,9 +233,9 @@ En cas de modification substantielle nécessitant une information ou un consente
 
 Pour toute question relative à la présente Politique de confidentialité ou à la protection des données :
 
-**Responsable du traitement : DF Prod Lab**
-Contact par e-mail uniquement.
-E-mail : dfprodlab@gmail.com
+**Responsable du traitement : DF Prod Lab**  
+Contact par e-mail uniquement.  
+E-mail : dfprodlab@gmail.com  
 Site Internet : https://djibyth714.github.io/orvix-legal/
 
 ---
