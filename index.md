@@ -8,5 +8,6 @@ Orvix IPTV est un lecteur multimédia : l’application ne fournit, ne vend et n
 
 - [Conditions générales d’utilisation](cgu)
 - [Politique de confidentialité](politique-confidentialite)
+- [Privacy Policy (English)](privacy-policy)
 
 Contact et support : [dfprodlab@gmail.com](mailto:dfprodlab@gmail.com)

@@ -4,9 +4,9 @@ title: Politique de confidentialité — Orvix IPTV
 
 # POLITIQUE DE CONFIDENTIALITÉ
 
-**Application : Orvix IPTV**  
+**Application : Orvix IPTV (mobile, tablette et téléviseur connecté)**  
 **Version : 1.0**  
-**Dernière mise à jour : 9 octobre 2026**  
+**Dernière mise à jour : 17 octobre 2026**  
 **Responsable du traitement : DF Prod Lab**
 
 ## 1. Introduction
@@ -60,6 +60,8 @@ Lorsque l’utilisateur configure une source utilisant Xtream Codes ou un mécan
 * les réponses techniques du serveur.
 
 Les secrets doivent être conservés dans le stockage sécurisé de la plateforme, lorsque cela est techniquement possible, notamment le Keychain sur les appareils Apple et un mécanisme sécurisé équivalent sur Android.
+
+Sur les téléviseurs connectés (Samsung Tizen, LG webOS, Hisense VIDAA), les plateformes n’offrent pas un tel stockage sécurisé aux applications : les sources et identifiants sont conservés dans le stockage privé de l’Application sur le téléviseur et ne sont transmis qu’au serveur configuré par l’utilisateur.
 
 Les mots de passe ne doivent pas être enregistrés en clair dans la base SQLite ni apparaître dans les journaux techniques.
 
