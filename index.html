@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orvix IPTV</title>
+<meta name="description" content="Orvix IPTV : lecteur IPTV pour iPhone, iPad, Mac, Windows, Android et Smart TV. Importez vos propres listes M3U ou Xtream Codes.">
+<meta property="og:title" content="Orvix IPTV">
+<meta property="og:description" content="Le lecteur IPTV pour tous vos écrans : iPhone, iPad, Mac, Windows, Android et Smart TV.">
+<meta property="og:image" content="https://orvix-iptv.dsall.fr/img/tv-live.jpg">
+<meta name="theme-color" content="#0A1020">
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/icon-256.png">
+<style>
+@font-face { font-family: Montserrat; src: url(fonts/montserrat.ttf) format("truetype"); font-weight: 100 900; font-display: swap; }
+:root {
+  --bg: #0A1020; --bg2: #101A30; --card: #14203A; --line: #22314F;
+  --text: #EEF3FB; --muted: #9AA8C2; --accent: #19D0E0; --accent-ink: #04232A;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 Montserrat, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; display: block; }
+.hero-grid > *, .feat-grid > *, .grid > * { min-width: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header { position: sticky; top: 0; z-index: 10; background: rgba(10,16,32,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; gap: 16px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.bar nav { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+.bar nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+.bar nav a:hover { color: var(--text); }
+.lang { border: 1px solid var(--line); background: transparent; color: var(--text); border-radius: 8px; padding: 6px 10px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+
+/* Hero */
+.hero { padding: 72px 0 40px; background: radial-gradient(1000px 500px at 80% -10%, rgba(25,208,224,.18), transparent 60%); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: center; }
+h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.08; margin: 0 0 18px; font-weight: 800; letter-spacing: -.02em; }
+h1 em { font-style: normal; color: var(--accent); }
+.lead { color: var(--muted); font-size: 18px; margin: 0 0 28px; max-width: 34em; }
+.cta { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-ink); font-weight: 800; text-decoration: none; padding: 14px 22px; border-radius: 12px; }
+.cta:hover { filter: brightness(1.08); }
+.note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+.shot { border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+
+/* Sections */
+section { padding: 64px 0; }
+h2 { font-size: clamp(26px, 3.4vw, 36px); margin: 0 0 8px; font-weight: 800; letter-spacing: -.01em; }
+.sub { color: var(--muted); margin: 0 0 32px; }
+
+/* Downloads */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.dl { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.dl svg { width: 30px; height: 30px; color: var(--accent); margin-bottom: 6px; }
+.dl h3 { margin: 0; font-size: 18px; }
+.dl p { margin: 0 0 12px; color: var(--muted); font-size: 14px; flex: 1; }
+.btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border-radius: 10px; padding: 11px 14px; font-weight: 700; font-size: 14px; text-decoration: none; }
+.btn.on { background: var(--accent); color: var(--accent-ink); }
+.btn.on:hover { filter: brightness(1.08); }
+.btn.soon { border: 1px dashed var(--line); color: var(--muted); cursor: default; }
+
+/* Features */
+.features { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.feat-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.feat-list li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
+.feat-list li::before { content: ""; width: 10px; height: 10px; margin: 8px 0 0 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(25,208,224,.15); }
+.feat-list b { display: block; }
+.feat-list span { color: var(--muted); font-size: 15px; }
+.phones { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.phones img { border-radius: 18px; border: 1px solid var(--line); }
+
+/* Notice + footer */
+.notice { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 20px 22px; color: var(--muted); }
+.notice b { color: var(--text); }
+footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+.foot { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; }
+footer a { color: var(--text); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+.foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.credits { margin-top: 18px; font-size: 12px; }
+
+/* Language switch */
+html[lang="fr"] [lang="en"], html[lang="en"] [lang="fr"] { display: none !important; }
+
+@media (max-width: 860px) {
+  .hero { padding-top: 40px; }
+  .hero-grid, .feat-grid { grid-template-columns: 1fr; gap: 32px; }
+  .bar nav a { display: none; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#"><img src="img/icon-256.png" alt="">Orvix IPTV</a>
+    <nav>
+      <a href="#telecharger"><span lang="fr">Télécharger</span><span lang="en">Download</span></a>
+      <a href="#fonctions"><span lang="fr">Fonctions</span><span lang="en">Features</span></a>
+      <a href="#contact">Contact</a>
+      <button class="lang" id="lang" type="button" aria-label="Language"><span lang="fr">EN</span><span lang="en">FR</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 lang="fr">Vos playlists IPTV, <em>sur tous vos écrans</em></h1>
+      <h1 lang="en">Your IPTV playlists, <em>on every screen</em></h1>
+      <p class="lead" lang="fr">Orvix IPTV lit vos propres listes M3U et comptes Xtream Codes sur iPhone, iPad, Mac, Windows, Android et Smart TV. Simple, rapide, gratuit, sans compte.</p>
+      <p class="lead" lang="en">Orvix IPTV plays your own M3U playlists and Xtream Codes accounts on iPhone, iPad, Mac, Windows, Android and Smart TVs. Simple, fast, free, no account needed.</p>
+      <a class="cta" href="#telecharger"><span lang="fr">Télécharger gratuitement</span><span lang="en">Download for free</span> ↓</a>
+      <p class="note" lang="fr">Lecteur uniquement : aucune chaîne ni abonnement fourni.</p>
+      <p class="note" lang="en">Player only: no channels or subscription included.</p>
+    </div>
+    <img class="shot" src="img/tv-live.jpg" width="1600" height="900" alt="Orvix IPTV — TV en direct (démo)">
+  </div>
+</section>
+
+<section id="telecharger">
+  <div class="wrap">
+    <h2 lang="fr">Télécharger Orvix IPTV</h2>
+    <h2 lang="en">Download Orvix IPTV</h2>
+    <p class="sub" lang="fr">Choisissez votre appareil. L’application est gratuite sur toutes les plateformes.</p>
+    <p class="sub" lang="en">Pick your device. The app is free on every platform.</p>
+    <div class="grid">
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+        <h3>iPhone &amp; iPad</h3>
+        <p lang="fr">iOS et iPadOS, sur l’App Store.</p>
+        <p lang="en">iOS and iPadOS, on the App Store.</p>
+        <a class="btn on" href="https://apps.apple.com/app/orvix-iptv/id6821155225" rel="noopener"><span lang="fr">Ouvrir l’App Store</span><span lang="en">Open the App Store</span></a>
+      </div>
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="4.5" width="16" height="11" rx="1.5"/><path d="M2 19.5h20"/></svg>
+        <h3>Mac</h3>
+        <p lang="fr">Mac à puce Apple (M1 et plus récents), sur le Mac App Store.</p>
+        <p lang="en">Apple silicon Macs (M1 and later), on the Mac App Store.</p>
+        <a class="btn on" href="https://apps.apple.com/app/orvix-iptv/id6821155225" rel="noopener"><span lang="fr">Ouvrir l’App Store</span><span lang="en">Open the App Store</span></a>
+      </div>
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="13" rx="1.5"/><path d="M9 21h6M12 17v4"/></svg>
+        <h3>Windows</h3>
+        <p lang="fr">Windows 10 et 11, sur le Microsoft Store.</p>
+        <p lang="en">Windows 10 and 11, on the Microsoft Store.</p>
+        <a class="btn on" href="https://apps.microsoft.com/detail/9NL167KB47Q5" rel="noopener"><span lang="fr">Ouvrir le Microsoft Store</span><span lang="en">Open the Microsoft Store</span></a>
+      </div>
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M6 6h12M6 17.5h12"/></svg>
+        <h3>Android</h3>
+        <p lang="fr">Téléphones et tablettes, sur Google Play.</p>
+        <p lang="en">Phones and tablets, on Google Play.</p>
+        <span class="btn soon"><span lang="fr">Bientôt disponible</span><span lang="en">Coming soon</span></span>
+      </div>
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8 20h8"/></svg>
+        <h3>Samsung Smart TV</h3>
+        <p lang="fr">Téléviseurs Samsung (Tizen) 2022 et plus récents.</p>
+        <p lang="en">Samsung TVs (Tizen), 2022 and later.</p>
+        <span class="btn soon"><span lang="fr">Bientôt disponible</span><span lang="en">Coming soon</span></span>
+      </div>
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8 20h8"/></svg>
+        <h3>LG Smart TV</h3>
+        <p lang="fr">Téléviseurs LG (webOS) 2018 et plus récents.</p>
+        <p lang="en">LG TVs (webOS), 2018 and later.</p>
+        <span class="btn soon"><span lang="fr">Bientôt disponible</span><span lang="en">Coming soon</span></span>
+      </div>
+      <div class="dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8 20h8"/></svg>
+        <h3>Hisense (VIDAA)</h3>
+        <p lang="fr">Téléviseurs équipés de VIDAA.</p>
+        <p lang="en">TVs running VIDAA.</p>
+        <span class="btn soon"><span lang="fr">Bientôt disponible</span><span lang="en">Coming soon</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="fonctions">
+  <div class="wrap feat-grid">
+    <div>
+      <h2 lang="fr">Tout ce qu’il faut, rien de plus</h2>
+      <h2 lang="en">Everything you need, nothing more</h2>
+      <p class="sub" lang="fr">Une interface claire, pensée pour le tactile, la souris et la télécommande.</p>
+      <p class="sub" lang="en">A clean interface designed for touch, mouse and TV remote.</p>
+      <ul class="feat-list">
+        <li><div><b lang="fr">Vos sources, en quelques secondes</b><b lang="en">Your sources in seconds</b><span lang="fr">Lien M3U, fichier M3U ou compte Xtream Codes.</span><span lang="en">M3U link, M3U file or Xtream Codes account.</span></div></li>
+        <li><div><b lang="fr">TV en direct avec aperçu</b><b lang="en">Live TV with preview</b><span lang="fr">Catégories, recherche, aperçu de la chaîne puis plein écran, guide des programmes.</span><span lang="en">Categories, search, channel preview then full screen, program guide.</span></div></li>
+        <li><div><b lang="fr">Films et séries</b><b lang="en">Movies and series</b><span lang="fr">Saisons, épisodes, reprise de la lecture là où vous l’avez laissée.</span><span lang="en">Seasons, episodes, resume where you left off.</span></div></li>
+        <li><div><b lang="fr">Favoris, historique, contrôle parental</b><b lang="en">Favorites, history, parental control</b><span lang="fr">Retrouvez vos chaînes en un geste ; protégez l’accès par un code PIN.</span><span lang="en">Find your channels in one tap; protect access with a PIN.</span></div></li>
+        <li><div><b lang="fr">Vie privée</b><b lang="en">Privacy</b><span lang="fr">Aucun compte, aucune collecte de données : vos identifiants restent sur votre appareil.</span><span lang="en">No account, no data collection: your credentials stay on your device.</span></div></li>
+      </ul>
+    </div>
+    <div class="phones">
+      <img src="img/phone-01-accueil.jpg" width="506" height="1100" alt="Accueil (démo)" loading="lazy">
+      <img src="img/phone-03-live-categories.jpg" width="506" height="1100" alt="TV en direct (démo)" loading="lazy">
+      <img src="img/phone-04-films.jpg" width="506" height="1100" alt="Films (démo)" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="notice" lang="fr"><b>Orvix IPTV est un lecteur multimédia.</b> L’application ne fournit, ne vend et n’héberge aucune chaîne, playlist ni abonnement. Chaque utilisateur importe ses propres sources et doit disposer des droits nécessaires sur les contenus qu’il lit. Les captures d’écran montrent uniquement le mode démo (flux de test publics).</div>
+    <div class="notice" lang="en"><b>Orvix IPTV is a media player.</b> The app does not provide, sell or host any channel, playlist or subscription. Users add their own sources and must hold the rights to the content they play. Screenshots show demo mode only (public test streams).</div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div><b style="color:var(--text)">Orvix IPTV</b> · DF Prod Lab</div>
+        <div><span lang="fr">Contact et support :</span><span lang="en">Contact and support:</span> <a href="mailto:contact@orvix-iptv.dsall.fr">contact@orvix-iptv.dsall.fr</a></div>
+      </div>
+      <div class="foot-links">
+        <a href="cgu" lang="fr">Conditions d’utilisation</a>
+        <a href="politique-confidentialite" lang="fr">Politique de confidentialité</a>
+        <a href="privacy-policy" lang="en">Privacy Policy</a>
+        <a href="politique-confidentialite" lang="en">Politique de confidentialité (FR)</a>
+      </div>
+    </div>
+    <p class="credits" lang="fr">Visuels de démonstration : « Big Buck Bunny » © Blender Foundation, licence CC BY 3.0. App Store, Mac App Store, Microsoft Store, Google Play, Samsung, LG et VIDAA sont des marques de leurs détenteurs respectifs.</p>
+    <p class="credits" lang="en">Demo visuals: “Big Buck Bunny” © Blender Foundation, CC BY 3.0. App Store, Mac App Store, Microsoft Store, Google Play, Samsung, LG and VIDAA are trademarks of their respective owners.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  function set(l) { root.lang = l; try { localStorage.setItem('orvix-lang', l); } catch (e) {} }
+  var saved = null;
+  try { saved = localStorage.getItem('orvix-lang'); } catch (e) {}
+  var q = /[?&]lang=(fr|en)/.exec(location.search);
+  set(q ? q[1] : saved || (/^fr\b/i.test(navigator.language || '') ? 'fr' : 'en'));
+  document.getElementById('lang').addEventListener('click', function () { set(root.lang === 'fr' ? 'en' : 'fr'); });
+})();
+</script>
+</body>
+</html>
